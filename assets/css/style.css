@@ -29,7 +29,13 @@ family=Lato -> Títulos, textos
 /* FONTS */
 
 /* VARIÁVEIS */
-:root{}
+:root{
+    --corBranco: #FFFFFF;
+    --corAzulClaro: #007aff;
+    --corAzulEscuro: #00043e;
+    --corCinza: #303030;
+    --corCinzaClaro: #818181;
+}
   
 /* GERAL */
 html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
@@ -60,6 +66,9 @@ div.container{
     max-width: 1140px;
     margin:0 auto;
 }
+h2 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
 /* GERAL */
   
 /* HTML */
@@ -67,11 +76,16 @@ html{}
 /* HTML */
   
 /* BODY */
-body{}
+body{
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
 /* BODY */
   
 /* HEADER */
 header{}
+
+.largue-container {}
+
 /* HEADER */
   
 /* FOOTER */
@@ -80,6 +94,26 @@ footer{}
 
 /* INICIAL */
 main{}
+
+.secaoDestaque {}
+.secaoDestaqueFormulario {}
+
+.secaoSobre {}
+.flex {}
+.flex-col {}
+
+.secaoCursos {}
+
+.secaoCalendar {}
+.calendario {}
+.calendario-data {}
+.calendario-data-rodape {}
+
+.secaoContato {}
+.secaoContato-informacoes {}
+
+.form-input-model {}
+
 /* INICIAL */
 
 /* EXTRAS */
