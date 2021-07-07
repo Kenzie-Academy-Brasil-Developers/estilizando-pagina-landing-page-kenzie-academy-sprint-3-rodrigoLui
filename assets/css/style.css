@@ -33,8 +33,8 @@ family=Lato -> Títulos, textos
     --corBranco: #FFFFFF;
     --corAzulClaro: #007aff;
     --corAzulEscuro: #00043e;
-    --corCinza: #303030;
-    --corCinzaClaro: #818181;
+    --corCinza: #303030c0;
+    --corCinzaClaro: #8181814b;
 }
   
 /* GERAL */
@@ -45,17 +45,25 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
     font-family: sans-serif;
     list-style: none;
 }
-img{ max-width: 800px; }
+img{ width: 80px; }
 
 figcaption { display: none; }
 
 div.flex{ display: flex; }
 
-div.full-container{ width: 100%; max-width: 1850px; margin:0 auto; }
-
-div.large-container{ width: 100%; max-width: 1170px; margin:0 auto; }
-
-div.container{ width: 100%; max-width: 1140px; margin:0 auto; }
+div.large-container, div.container { 
+    width: 100%; 
+    max-width: 1000px; 
+    margin:0 auto; 
+}
+div.container { 
+    padding-bottom: 50px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
 
 h2 { font-family: 'Montserrat', Arial, Helvetica, sans-serif; }
 /* GERAL */
@@ -65,25 +73,30 @@ html{}
 /* HTML */
   
 /* BODY */
-body{
-    font-family: 'Lato', Arial, Helvetica, sans-serif;
+body{ 
+    font-family: 'Lato', Arial, Helvetica, sans-serif; 
+    width: 100vw; 
+    overflow-x: hidden;
 }
 /* BODY */
   
 /* HEADER */
-header{
-    width: 10vh;
+header{}
+
+.topo {
+    height: 15vh;
     width: 100vw;
     background-color: var(--corAzulEscuro);
+    display: flex;
 }
 
 .large-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 5px;
     width: 80%;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 .large-container img, .large-container figure {
@@ -91,10 +104,16 @@ header{
     height: 50px;
 }
 .menu-nav { display: none;}
+.menu {display: flex; justify-content: space-around; width: 40vw; max-width: 320px;}
 .menu a {
     text-decoration: none;
     color: var(--corBranco);
     font-size: 13px;
+    padding: 10px;
+}
+.menu a:hover{
+    background-color: var(--corAzulClaro);
+    border-radius: 5px;
 }
 /* HEADER */
   
@@ -109,12 +128,13 @@ main{}
 .secaoDestaque {
     width: 80%; 
     padding-bottom: 50px;
-    max-width: 1100px; 
+    max-width: 1000px; 
     margin: 0 auto;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     color: var(--corBranco);
 }
 .secaoDestaque h2{ font-size: 63px; font-weight: 300; margin-bottom: 10px;}
@@ -140,8 +160,57 @@ main{}
 .secaoSobre p, .secaoSobre span{font-size: 19px;}
 .secaoSobre h2 {font-size: 24px;}
 
-article.flex {}
-article.flex .flex-col {}
+article.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div.flex {
+    display: flex;
+    flex-direction: column;
+}
+article.flex .flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    
+}
+.py {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+.text-modify { color: var(--corCinza); font-size: 21px; margin-top: 50px; }
+.text-modify::after {
+    content: ' ';
+    display: block;
+    margin-bottom: 30px;
+}
+.bnt { 
+    background-color: transparent; 
+    padding: 5px; 
+    width: 80%; 
+    border: 2px solid var(--corCinzaClaro);
+    border-radius: 5px;
+}
+.cont-py, .cont-js, .text-modify, .cont-js ul { width: 80%;}
+
+.js {
+    background-color: var(--corCinzaClaro);
+    text-align: center;
+}
+.cont-js ul {
+    list-style: disc;
+    line-height: 160%;
+    text-align: left;
+    margin: 0 auto;
+    color: var(--corCinza);
+}
+.cont-js h2 { margin-bottom: 30px;}
+
+.img-adapt { width: 250px; margin: 0; }
 
 .secaoCursos {}
 
@@ -174,8 +243,26 @@ article.flex .flex-col {}
 /* MEDIA QUERIES */
     @media screen and (min-width: 400px) {}
   
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 600px) {
         .ico-mobile { display: none; }
+
         .menu-nav { display: initial; }
+
+        .bnt { width: 250px;}
+
+        div.container { padding: 30px; flex-direction: row;}
+
+        article.flex .flex-col { width: 50%; }
+
+        .secaoDestaqueFormulario input{ max-width: 400px; width: 30vw;}
+
+        .secaoDestaque { height: 60vh; }
+
+        .secaoDestaque-color {
+            background-image: url(../img/background-destaque.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
     }
 /* MEDIA QUERIES */
