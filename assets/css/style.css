@@ -45,7 +45,7 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
     font-family: sans-serif;
     list-style: none;
 }
-img{ width: 80px; }
+/* img{ width: 80px; } */
 
 figcaption { display: none; }
 
@@ -81,9 +81,7 @@ body{
 /* BODY */
   
 /* HEADER */
-header{}
-
-.topo {
+header{
     height: 15vh;
     width: 100vw;
     background-color: var(--corAzulEscuro);
@@ -154,6 +152,7 @@ main{}
     border-top-right-radius: 5px;
     border: none;
     background-color: var(--corAzulClaro);
+    cursor: pointer;
 }
 
 .secaoSobre {}
@@ -194,6 +193,11 @@ article.flex .flex-col {
     width: 80%; 
     border: 2px solid var(--corCinzaClaro);
     border-radius: 5px;
+    cursor: pointer;
+}
+.bnt:hover {
+    background-color: var(--corAzulEscuro);
+    color: var(--corBranco);
 }
 .cont-py, .cont-js, .text-modify, .cont-js ul { width: 80%;}
 
@@ -212,17 +216,159 @@ article.flex .flex-col {
 
 .img-adapt { width: 250px; margin: 0; }
 
-.secaoCursos {}
+.secaoCursos { margin: 0 auto; text-align: center; }
 
-.secaoCalendar {}
-.calendario {}
-.calendario-data {}
-.calendario-data-rodape {}
+.secaoCursos-title {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+}
 
-.secaoContato {}
-.secaoContato-informacoes {}
+.secaoCursos h2 { font-size: 19px; }
+.secaoCursos p { font-size: 15px; }
+
+.cursos-flex {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.cursos-flex-items {
+    flex: 1 1 auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.cursos-flex-items img { width: 50%; }
+
+.secaoCalendar { text-align: center; margin-top: 30px; margin-bottom: 50px;}
+.secaoCalendar-title { padding-top: 40px; padding-bottom: 20px; margin: 0 auto; }
+
+.calendario {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.calendario > li {
+    border: 1px solid var(--corAzulEscuro);
+    margin-bottom: 40px;
+    flex: 1 1 100vw;
+}
+
+.calendario > li h3 { padding: 20px; }
+.calendario > li p { padding: 20px; }
+
+.calendario > li p { border-bottom: 1px solid lightgray; }
+
+.calendario-data { 
+    font-size: 32px; 
+    background-color: var(--corAzulEscuro); 
+    color: var(--corBranco); 
+    display: block; 
+    padding: 30px;
+}
+
+.calendario-data-rodape span {
+    display: block;
+    font-size: 32px;
+    padding: 20px;
+}
+
+.calendario-data-rodape { padding-bottom: 30px; }
+
+.calendario-data-rodape button {
+    font-size: 32px;
+    width: 200px;
+    border: 1px solid var(--corAzulClaro);
+    background-color: var(--corAzulClaro);
+    border-radius: 5px;
+    color: var(--corBranco);
+    cursor: pointer;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+    transition-duration: 0.4s;
+}
+
+.calendario-data-rodape button:hover { background-color: var(--corAzulEscuro); border: 1px solid var(--corAzulEscuro); }
+
+.secaoContato { background-color: lightgray; padding: 40px 0; }
+.secaoContato h2 { text-align: center; margin-bottom: 20px;}
+.secaoContato a { text-decoration: none; color: inherit;}
+
+.secaoContato-flex {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.secaoContato-flex-items {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 50%;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    float: right;
+    cursor: pointer;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+}
+
+label { display: none; }
+
+.secaoContato-informacoes p {margin-bottom: 10px; }
+
+li.flex-icones img { height: 20px; margin-right: 15px; }
+
+.contatoTelefone {
+    margin-left: 5px;
+    margin-right: 20px;
+}
+li.flex-icones {
+    display: flex;
+    align-items: center;
+}
+
+
+/* .contatoLocal::before { content: url(../img/local.png); }
+.contatoTelefone::before { content: url(../img/celular.png); }
+.contatoEmail::before { content: url(../img/mail.png); } */
 
 .form-input-model {}
+
+footer { padding: 20px; margin: 0 auto; }
+
+.footerUp {
+    width: 24px;
+    margin: 0 auto;
+}
+
+.footerUp a { cursor: pointer; }
+
+footer p {
+    display: none;
+}
 
 /* INICIAL */
 
@@ -241,7 +387,8 @@ article.flex .flex-col {
   
 
 /* MEDIA QUERIES */
-    @media screen and (min-width: 400px) {}
+    @media screen and (min-width: 400px) {
+    }
   
     @media screen and (min-width: 600px) {
         .ico-mobile { display: none; }
@@ -265,5 +412,50 @@ article.flex .flex-col {
             background-size: cover;
             background-attachment: fixed;
         }
+        .cursos-flex {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            max-width: 100vw;
+        }
+        .cursos-flex-items { flex: 1 1 33%; }
+        .cursos-flex-items img { width: 25%; }
+
+        .calendario {
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 100vw;
+            justify-content: space-around;
+        }
+
+        .calendario > li {
+            max-width: 33%;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 266px;
+        }
+
+        .calendario-data-rodape button { width: 200px; }
+
+        .secaoContato-flex {
+            flex-direction: row;
+            max-width: 70vw;
+            justify-content: space-evenly;
+        }
+
+        .secaoContato-flex-items {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 50%;
+        }
+
+        .form-input-model-name { float: left; width: 48%; }
+        .form-input-model-email { float: right; width: 48%; }
+        .form-input-model-text { clear: both; }
+
+        footer { text-align: center; }
+        footer p { display: initial;}
+        footer a { text-decoration: none; color: var(--corAzulClaro);}
+        
     }
 /* MEDIA QUERIES */

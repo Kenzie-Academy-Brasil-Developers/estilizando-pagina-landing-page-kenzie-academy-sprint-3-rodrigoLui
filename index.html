@@ -9,10 +9,9 @@
   <title>Landing Page Kenzie Academy</title>
 </head>
 <body>
-  
+   
   <!-- CABEÇALHO -->
-  <header class="topo">
-
+  <header id="topo">
     <div class="large-container">
       <!-- LOGO -->
       <figure>
@@ -33,7 +32,6 @@
         </ul>
       </nav>
     </div>
-
   </header>
 
   <!-- PÁGINA INICIAL -->
@@ -50,12 +48,10 @@
           <button type="button">Subscribe</button>
         </div>
       </div>  
-
     </section>
 
     <!-- SEÇÃO SOBRE -->
     <section class="secaoSobre">
-
       <article class="flex">
         
         <!-- COLUNA ESQUERDA -->
@@ -79,7 +75,6 @@
               </figure>
             </div>
           </div>
-    
         </section>
 
         <!-- COLUNA ESQUERDA -->
@@ -106,81 +101,75 @@
             </div>
           </div>
         </section>
-
-        
-
       </article>
-
     </section>
-
     <!-- SEÇÃO CURSOS -->
     <section class="secaoCursos">
 
       <article>
-
-        <h2>COURSES</h2>
-        <p>What we offer</p>
+        <div class="secaoCursos-title">
+          <h2>COURSES</h2>
+          <p>What we offer</p>
+        </div>
 
         <!-- LISTA DE CURSOS -->
-        <ul>
-        
-          <li>
+        <ul class="cursos-flex">
+          <li class="cursos-flex-items">
             <img src="assets/img/html-css.png" alt="">
             <h3>Html/Css</h3>
             <p>The standard Lorem Ipsum passage,<br> used since the 1500s</p>
           </li>
 
-          <li>
+          <li class="cursos-flex-items">
             <img src="assets/img/js.png" alt="">
             <h3>JavaScript</h3>
             <p>The standard Lorem Ipsum passage,<br> used since the 1500s</p>
           </li>
 
-          <li>
+          <li class="cursos-flex-items">
             <img src="assets/img/react.png" alt="">
             <h3>React</h3>
             <p>The standard Lorem Ipsum passage,<br> used since the 1500s</p>
           </li>
 
-          <li>
+          <li class="cursos-flex-items">
             <img src="assets/img/py.webp" alt="">
             <h3>Python</h3>
             <p>The standard Lorem Ipsum passage,<br> used since the 1500s</p>
           </li>
 
-          <li>
+          <li class="cursos-flex-items">
             <img src="assets/img/dj.png" alt="">
             <h3>Django</h3>
             <p>The standard Lorem Ipsum passage,<br> used since the 1500s</p>
           </li>
 
-          <li>
+          <li class="cursos-flex-items">
             <img src="assets/img/multitasking.svg" alt="">
             <h3 style="color:#303030;">Soft Skills</h3>
             <p>The standard Lorem Ipsum passage,<br> used since the 1500s</p>
           </li>
-          
         </ul>
-
       </article>
-
     </section>
 
     <section class="secaoCalendar">
-
-      <h2>SCHEDULE</h2>
-      <p>Lorem ipsum dolor sit schedule</p>
+      <div class="secaoCalendar-title">
+        <h2>SCHEDULE</h2>
+        <p>Lorem ipsum dolor sit schedule</p>
+      </div>
 
       <!-- LISTA CALENDÁRIO -->
       <ul class="calendario">
-
         <li>
+          <div class="calendarioItems">
           <span class="calendario-data">22/02</span>
           <h3>HTML/CSS</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo consectetur quae commodi sed eos repellendus adipisci architecto provident, et animi sapiente, rerum fugit quod voluptatum officia ipsum maxime nobis explicabo!</p>
-          <div class="calendario-data-rodape">
-            <span>7mp</span>
+            <div class="calendario-data-rodape">
+            <span>7pm</span>
             <button>Sign Up</button>
+            </div>
           </div>
         </li>
 
@@ -189,7 +178,7 @@
           <h3>JavaScript</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo consectetur quae commodi sed eos repellendus adipisci architecto provident, et animi sapiente, rerum fugit quod voluptatum officia ipsum maxime nobis explicabo!</p>
           <div class="calendario-data-rodape">
-            <span>7mp</span>
+            <span>7pm</span>
             <button>Sign Up</button>
           </div>
         </li>
@@ -199,71 +188,58 @@
           <h3>Python</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo consectetur quae commodi sed eos repellendus adipisci architecto provident, et animi sapiente, rerum fugit quod voluptatum officia ipsum maxime nobis explicabo!</p>
           <div class="calendario-data-rodape">
-            <span>7mp</span>
+            <span>7pm</span>
             <button>Sign Up</button>
           </div>
         </li>
-
       </ul>
-
     </section>
 
     <section class="secaoContato">
-
-      <div class="flex">
+        <h2>Contact</h2>
+      <div class="secaoContato-flex">
 
         <!-- COLUNA LADO ESQUERDO -->
-        <div class="flex-col">
-          
+        <div class="secaoContato-flex-items">
           <div class="secaoContato-informacoes">
-          
             <p>Contact us and we'll get back to you within 24 hours.</p>
             
             <ul>
-              <li><a href="#">Chicago, US</a> </li>
-              <li><a href="tel:001515151515">+00 1515151515</a></li>
-              <li><a href="malito:myemail@something.com">myemail@something.com</a></li>
+              <li class="flex-icones"><img class="contatoLocal" src="./assets/img/local.png" alt="icone-terra"><a href="#">Chicago, US</a> </li>
+              <li class="flex-icones"><img class="contatoTelefone" src="./assets/img/celular1.png" alt="icone-telefone"><a href="tel:001515151515">+00 1515151515</a></li>
+              <li class="flex-icones"> <img class="contatoEmail" src="./assets/img/mail.png" alt="icone-Email"><a href="malito:myemail@something.com">myemail@something.com</a></li>
             </ul>
-
           </div>
-
         </div>
 
         <!-- COLUNA LADO DIRETO -->
-        <div class="flex-col">
-          
-          <h2>Contact</h2>
-          
+        <div class="secaoContato-flex-items">
           <form action="">
 
-            <div class="form-input-model">
+            <div class="form-input-model-name">
               <label for="nome">Nome</label>
               <input type="text" placeholder="Name" id="nome" name="nome">
             </div>
 
-            <div class="form-input-model">
+            <div class="form-input-model-email">
               <label for="email">E-mail</label>
               <input type="text" placeholder="E-mail" id="email" name="email">
             </div>
 
-            <div class="form-input-model">
+            <div class="form-input-model-text">
               <label for="mensagem">E-mail</label>
-              <textarea name="mensagem" id="mensagem"></textarea>
+              <textarea name="mensagem" id="mensagem" placeholder="Comment"></textarea>
             </div>
 
             <input type="submit" value="Send">
-
           </form>
-
         </div>
-
       </div>
-
     </section>
-
   </main>
 
   <footer>
+    <div class="footerUp"><a href="#topo"><img src="assets/img/scrollup.png" alt=""></a></div>
     <p>Kenzie Academy - <a href="kenzie.com.br">kenzie.com.br</a></p>
   </footer>
 
