@@ -137,7 +137,7 @@ main{}
     justify-content: center;
     color: var(--corBranco);
 }
-.secaoDestaque h2{ font-size: 63px; font-weight: 300; margin-bottom: 10px;}
+.secaoDestaque h2{ font-size: 32px; font-weight: 300; margin-bottom: 10px;}
 .secaoDestaque p{ font-size: 21px; margin-bottom: 10px;}
 
 .secaoDestaqueFormulario { display: flex; margin-bottom: 10px;}
@@ -257,6 +257,7 @@ article.flex .flex-col {
         .secaoDestaqueFormulario input{ max-width: 400px; width: 30vw;}
 
         .secaoDestaque { height: 60vh; }
+        .secaoDestaque h2{ font-size: 63px; }
 
         .secaoDestaque-color {
             background-image: url(../img/background-destaque.webp);
